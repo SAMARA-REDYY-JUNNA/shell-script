@@ -17,7 +17,6 @@ then
     exit 1
 else
     echo "installations of mysql is success"  
-echo "is script running?"
 
 dnf install git -y
 
