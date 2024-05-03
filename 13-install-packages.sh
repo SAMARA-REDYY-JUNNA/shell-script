@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID= $(id -u)
+USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/ $SCRIPT_NAME-$TIMESTAMP.log
@@ -31,12 +31,11 @@ VALIDATE(){
   do 
     echo "package to install: $!"
     dnf list installed $i &>>$LOGFILE
-
     if [ $? -eq 0 ]
     then
      echo -e "$i already installed..$y SKIPPING $N"
     else
-       dnf install $i-y &>>LOGFILE
+       dnf install $i -y &>>LOGFILE
        VALIDATE $? "installation of $i"
     fi
    done
