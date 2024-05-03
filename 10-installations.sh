@@ -6,4 +6,6 @@ then
     echo "please run this script with room access."
 else
     echo "you are super user."
+ fi
+    
 dnf install mysql -y
