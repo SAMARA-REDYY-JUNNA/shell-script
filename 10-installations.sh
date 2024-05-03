@@ -27,3 +27,4 @@ then
 else
     echo "installations of git is success"  
 echo "is script running?"
+fi
