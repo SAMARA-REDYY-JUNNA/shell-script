@@ -16,17 +16,17 @@ then
     echo "installation of mysql is FAILURE"
     exit 1
 else
-    echo "installations of mysql is success"  
+    echo "installations of mysql is success" 
+fi 
 
 dnf install git -y
 
 if [ $? -ne 0 ]
 then
-    echo "installation of git is FAILURE"
+    echo "installation of git.. is FAILURE"
     exit 1
 else
-    echo "installations of git is success"  
-echo "is script running?"
+    echo "installations of git.. is success"  
 fi
 
 echo "is script proceeding?"
