@@ -1,3 +1,5 @@
+#!/bin/bash
+
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
@@ -33,7 +35,8 @@ do
      then
        echo -e "$i already installed..$Y SKIPPING $N"
      else
-       echo "$i not installed..need to install"
+       dnf install $i -y &>>$LOGFILE
+       VALIDATE $? "installation of $i"
      fi    
 done     
       
