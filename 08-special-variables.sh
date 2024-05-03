@@ -7,5 +7,5 @@ echo "Current working directory: $PWD"
 echo "Home directory of current user: $Home"
 echo "Which user is running this script: $USER"
 echo "Hostname: $HOSTNAME"
-echo "process id of the current script: $$"
-echo "process id of last backgroung command: $!
+echo "process ID of the current script: $$"
+echo "process ID of last backgroung command: $!"
